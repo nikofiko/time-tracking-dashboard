@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link href="./src/output.css" rel="stylesheet">
+  <title>Frontend Mentor | Time tracking dashboard</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body class="flex flex-col justify-center items-center h-lvh bg-background-blue lg:flex-row">
+  <div class="bg-dark-blue rounded-2xl lg:mr-8 lg:mt-8 mt-40 mb-4 lg:mb-0">
+    <div class="bg-blue pl-8 rounded-2xl flex lg:block py-2 lg:py-0">
+      <div class="lg:py-6">
+        <img class="border-2 rounded-full border-white" src="/images/image-jeremy.png" alt="" width="70">
+      </div>
+      <p class="text-pale-blue text-xs pb-1 flex items-center lg:block pl-6 lg:pl-0 pr-6 lg:pr-0">Report for</p>
+      <h1 class="lg:text-3xl text-white font-thin pr-16 lg:pb-14 flex items-center lg:block">Jeremy <br> Robson</h1>
+    </div>
+    <div class="flex gap-14 lg:flex-col pl-8 pt-4 lg:gap-0 bg-dark-blue rounded-2xl">
+      <div class="daily pb-2">
+        <a class="cursor-pointer text-pale-blue hover:text-white">Daily</a>
+      </div>
+      <div class="weekly pb-2">
+        <a class="cursor-pointer font-thin text-pale-blue hover:text-white">Weekly</a>
+      </div>
+      <div class="monthly pb-6">
+        <a class="cursor-pointer font-thin text-pale-blue hover:text-white">Monthly</a>
+      </div>
+    </div> 
+  </div>
+
+
+  <div class="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-12">
+    <div class=" bg-work-color rounded-3xl lg:h-40">
+      <div class="bg-[url('/images/icon-work.svg')] bg-no-repeat bg-3/4 p-4 bg-work-color rounded-t-2xl">
+      </div>
+      <div class="w-full cursor-pointer bg-dark-blue flex flex-col rounded-2xl px-8 pt-6 hover:bg-desaturated-blue">
+        <div class="flex justify-between">
+          <h2 class="font-thin pb-2 text-white">Work</h2>
+          <div class="pt-2">
+            <img src="/images/icon-ellipsis.svg" alt="" width="15">
+          </div>
+        </div>
+        <div class="flex flex-row gap-28 lg:flex-col lg:gap-0">
+          <h1 class="daily text-xl lg:text-5xl text-white font-thin pb-2 hidden">5hrs</h1> <!-- 5hrs daily -->
+          <p class="daily text-pale-blue text-xs pt-2 lg:pb-6 hidden">Previous - 7hrs</p> <!--Previous - 7hrs  daily --> 
+        </div>
+        <div class="flex flex-row w-full gap-28 lg:flex-col lg:gap-0">
+          <h1 class="weekly text-xl lg:text-5xl text-white font-thin pb-2">32hrs</h1> <!-- weekly -->
+          <p class="weekly text-pale-blue text-xs pt-2 lg:pb-6">Previous - 36hrs</p> <!-- weekly -->
+        </div>
+        <div class="flex flex-row gap-28 lg:flex-col lg:gap-0">
+          <h1 class="monthly text-xl lg:text-5xl text-white font-thin pb-2 hidden">103hrs</h1> <!--103hrs  monthly -->
+          <p class="monthly text-pale-blue text-xs pt-2 lg:pb-6 hidden">Previous - 128hrs</p> <!--Previous - 128hrs  monthly -->
+        </div>
+      </div>
+    </div>
+
+
+    <div class="bg-play-color rounded-3xl lg:h-40">
+      <div class="bg-[url('/images/icon-play.svg')] bg-no-repeat bg-3/4 p-4 bg-play-color rounded-t-2xl">
+      </div>
+      <div class="w-full cursor-pointer bg-dark-blue flex flex-col rounded-2xl px-8 pt-6 hover:bg-desaturated-blue">
+        <div class="flex justify-between">
+          <h2 class="font-thin pb-2 text-white">Play</h2>
+          <div class="pt-2">
+            <img src="/images/icon-ellipsis.svg" alt="" width="15">
+          </div>
+        </div>
+        <div class="flex flex-row gap-28 lg:flex-col lg:gap-0">
+          <h1 class="daily text-xl lg:text-5xl text-white font-thin pb-2 hidden">1hrs</h1> <!-- 5hrs daily -->
+          <p class="daily text-pale-blue text-xs pt-2 lg:pb-6 hidden">Previous - 2hrs</p> <!--Previous - 7hrs  daily --> 
+        </div>
+        <div class="flex flex-row w-full gap-28 lg:flex-col lg:gap-0">
+          <h1 class="weekly text-xl lg:text-5xl text-white font-thin pb-2">10hrs</h1> <!-- weekly -->
+          <p class="weekly text-pale-blue text-xs pt-2 lg:pb-6">Previous - 8hrs</p> <!-- weekly -->
+        </div>
+        <div class="flex flex-row gap-28 lg:flex-col lg:gap-0">
+          <h1 class="monthly text-xl lg:text-5xl text-white font-thin pb-2 hidden">23hrs</h1> <!--103hrs  monthly -->
+          <p class="monthly text-pale-blue text-xs pt-2 lg:pb-6 hidden">Previous - 29hrs</p> <!--Previous - 128hrs  monthly -->
+        </div>
+      </div>
+    </div>
+
+
+    <div class="bg-study-color rounded-3xl lg:h-40">
+      <div class="bg-[url('/images/icon-study.svg')] bg-no-repeat bg-3/4 p-4 bg-study-color rounded-t-2xl">
+      </div>
+      <div class="cursor-pointer bg-dark-blue flex flex-col rounded-2xl px-8 pt-6 hover:bg-desaturated-blue">
+        <div class="flex justify-between">
+          <h2 class="font-thin pb-2 text-white">Study</h2>
+          <div class="pt-2">
+            <img src="/images/icon-ellipsis.svg" alt="" width="15">
+          </div>
+        </div>
+        <div class="flex flex-row gap-28 lg:flex-col lg:gap-0">
+          <h1 class="daily text-xl lg:text-5xl text-white font-thin pb-2 hidden">0hrs</h1> <!-- 5hrs daily -->
+          <p class="daily text-pale-blue text-xs pt-2 lg:pb-6 hidden">Previous - 1hrs</p> <!--Previous - 7hrs  daily --> 
+        </div>
+        <div class="flex flex-row w-full gap-28 lg:flex-col lg:gap-0">
+          <h1 class="weekly text-xl lg:text-5xl text-white font-thin pb-2">4hrs</h1> <!-- weekly -->
+          <p class="weekly text-pale-blue text-xs pt-2 lg:pb-6">Previous - 7hrs</p> <!-- weekly -->
+        </div>
+        <div class="flex flex-row gap-28 lg:flex-col lg:gap-0">
+          <h1 class="monthly text-xl lg:text-5xl text-white font-thin pb-2 hidden">13hrs</h1> <!--103hrs  monthly -->
+          <p class="monthly text-pale-blue text-xs pt-2 lg:pb-6 hidden">Previous - 19hrs</p> <!--Previous - 128hrs  monthly -->
+        </div>
+      </div>
+    </div>
+
+
+    <div class="bg-exercise-color rounded-3xl lg:h-40">
+      <div class="bg-[url('/images/icon-exercise.svg')] bg-no-repeat bg-3/4 p-4 bg-exercise-color rounded-t-2xl">
+      </div>
+      <div class="cursor-pointer bg-dark-blue flex flex-col rounded-2xl px-8 pt-6 hover:bg-desaturated-blue">
+        <div class="flex justify-between">
+          <h2 class="font-thin pb-2 text-white">Exercise</h2>
+          <div class="pt-2">
+            <img src="/images/icon-ellipsis.svg" alt="" width="15">
+          </div>
+        </div>
+        <div class="flex flex-row gap-28 lg:flex-col lg:gap-0">
+          <h1 class="daily text-xl lg:text-5xl text-white font-thin pb-2 hidden">1hr</h1> <!-- day -->
+          <p class="daily text-pale-blue text-xs pt-2 lg:pb-6 hidden">Previous - 1hr</p> <!-- day -->
+        </div>
+        <div class="flex flex-row gap-28 lg:flex-col lg:gap-0">
+          <h1 class="weekly text-xl lg:text-5xl text-white font-thin pb-2">4hrs</h1> <!-- weekly -->
+          <p class="weekly text-pale-blue text-xs pt-2 lg:pb-6">Previous - 5hrs</p> <!-- weekly -->
+        </div>
+        <div class="flex flex-row gap-28 lg:flex-col lg:gap-0">
+          <h1 class="monthly text-xl lg:text-5xl text-white font-thin pb-2 hidden">11hrs</h1> <!-- mont -->
+          <p class="monthly text-pale-blue text-xs pt-2 lg:pb-6 hidden">Previous - 18hrs</p> <!-- mont -->
+        </div>
+      </div>
+    </div>
+
+
+    <div class=" bg-social-color rounded-3xl lg:h-40">
+      <div class="bg-[url('/images/icon-social.svg')] bg-no-repeat bg-3/4 p-4 bg-social-color rounded-t-2xl">
+      </div>
+      <div class="cursor-pointer bg-dark-blue flex flex-col rounded-2xl px-8 pt-6 hover:bg-desaturated-blue">
+        <div class="flex justify-between">
+          <h2 class="font-thin pb-2 text-white">Social</h2>
+          <div class="pt-2">
+            <img src="/images/icon-ellipsis.svg" alt="" width="15">
+          </div>
+        </div>
+        <div class="flex flex-row gap-28 lg:flex-col lg:gap-0">
+          <h1 class="daily text-xl lg:text-5xl text-white font-thin pb-2 hidden">1hr</h1> <!-- day -->
+          <p class="daily text-pale-blue text-xs pt-2 lg:pb-6 hidden">Previous - 3hr</p> <!-- day -->
+        </div>
+        <div class="flex flex-row gap-28 lg:flex-col lg:gap-0">
+          <h1 class="weekly text-xl lg:text-5xl text-white font-thin pb-2">5hrs</h1> <!-- weekly -->
+          <p class="weekly text-pale-blue text-xs pt-2 lg:pb-6">Previous - 10hrs</p> <!-- weekly -->
+        </div>
+        <div class="flex flex-row gap-28 lg:flex-col lg:gap-0">
+          <h1 class="monthly text-xl lg:text-5xl text-white font-thin pb-2 hidden">21hrs</h1> <!-- mont -->
+          <p class="monthly text-pale-blue text-xs pt-2 lg:pb-6 hidden">Previous - 23hrs</p> <!-- mont -->
+        </div>
+      </div>
+    </div>
+
+
+    <div class=" bg-self-color rounded-3xl lg:h-40">
+      <div class="bg-[url('/images/icon-self-care.svg')] bg-no-repeat bg-3/4 p-4 bg-self-color rounded-t-2xl">
+      </div>
+      <div class="cursor-pointer bg-dark-blue flex flex-col rounded-2xl px-8 pt-6 hover:bg-desaturated-blue">
+        <div class="flex justify-between">
+          <h2 class="font-thin pb-2 text-white">Self Care</h2>
+          <div class="pt-2">
+            <img src="/images/icon-ellipsis.svg" alt="" width="15">
+          </div>
+        </div>
+        <div class="flex flex-row gap-28 lg:flex-col lg:gap-0">
+          <h1 class="daily text-xl lg:text-5xl text-white font-thin pb-2 hidden">0hr</h1> <!-- day -->
+          <p class="daily text-pale-blue text-xs pt-2 lg:pb-6 hidden">Previous - 1hr</p> <!-- day -->
+        </div>
+        <div class="flex flex-row gap-28 lg:flex-col lg:gap-0">
+          <h1 class="weekly text-xl lg:text-5xl text-white font-thin pb-2">2hrs</h1> <!-- weekly -->
+          <p class="weekly text-pale-blue text-xs pt-2 lg:pb-6">Previous - 2hrs</p> <!-- weekly -->
+        </div>
+        <div class="flex flex-row gap-28 lg:flex-col lg:gap-0">
+          <h1 class="monthly text-xl lg:text-5xl text-white font-thin pb-2 hidden">7hrs</h1> <!-- mont -->
+          <p class="monthly text-pale-blue text-xs pt-2 lg:pb-6 hidden">Previous - 11hrs</p> <!-- mont -->
+        </div>
+      </div>
+    </div>
+
+  </div>
+<script src="./script.js"></script>
+</body>
+</html>
